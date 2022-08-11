@@ -38,7 +38,7 @@ st.header('Numeri importanti')
 
 col1, col2, col3 = st.columns(3)
 
-col1.metric("Da quanti giorni ci sentiamo 💕", delta_1.days)
+col1.metric("Per quanti giorni ci siamo sentiti 💕", delta_1.days)
 col2.metric("Da quanti giorni non ci vediamo 😢", delta_2.days)
 col3.metric("Da quanti giorni non ci sentiamo 😔", delta_3.days)
 
