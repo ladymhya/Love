@@ -18,6 +18,7 @@ st.image(image, caption='Noi')
 st.write("Ciao Cla! Faccio tutto questo solo perchè ti amo...")
 
 df = pd.read_csv("ds1.csv")
+df2 = pd.read_csv("ds2.csv")
 
 first_contact = df["data"].min()
 first_contact = datetime.strptime(first_contact, "%Y-%m-%d")
@@ -45,13 +46,13 @@ col3.metric("Da quanti giorni non ci sentiamo 😔", delta_3.days)
 st.header('Statistiche importanti')
 
 st.write("Messaggi scambiati nel tempo")
-fig = px.histogram(df, x="data", y="count_messaggi", nbins=df.shape[0])
+fig = px.histogram(df, x="data", y="count_messaggi", color="inviato_da", nbins=df.shape[0])
 st.plotly_chart(fig, use_container_width=True)
 
 st.write("Ti amo scambiati nel tempo")
-fig = px.histogram(df, x="data", y="count_ti_amo", nbins=df.shape[0])
+fig = px.histogram(df, x="data", y="count_ti_amo", color="inviato_da", nbins=df.shape[0])
 st.plotly_chart(fig, use_container_width=True)
 
 st.write("Incontri nel tempo")
-fig = px.histogram(df, x="data", y="visti", nbins=df.shape[0])
+fig = px.histogram(df2, x="data", y="visti", nbins=df.shape[0])
 st.plotly_chart(fig, use_container_width=True)
