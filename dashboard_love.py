@@ -26,7 +26,7 @@ first_contact = datetime.strptime(first_contact, "%Y-%m-%d")
 last_contact = df["data"].max()
 last_contact = datetime.strptime(last_contact, "%Y-%m-%d")
 
-df_last_visit = df[df["visti"] == 1]
+df_last_visit = df2[df2["visti"] == 1]
 last_visit = df_last_visit["data"].max()
 last_visit = datetime.strptime(last_visit, "%Y-%m-%d")
 
